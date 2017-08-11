@@ -1,5 +1,9 @@
 {
-    "presets": [
-      "react-app"
-    ]
-  }
+  "plugins": [
+    "relay",
+    "emotion/babel"
+  ],
+  "presets": [
+    "react-app"
+  ]
+}
