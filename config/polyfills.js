@@ -14,3 +14,11 @@ require('whatwg-fetch');
 // Object.assign() is commonly used with React.
 // It will use the native implementation if it's present and isn't buggy.
 Object.assign = require('object-assign');
+
+// react-relay requires Map, Set, Promise, Object.assign, and Array#find.
+require('core-js/es6/array');
+require('core-js/es6/map');
+require('core-js/es6/set');
+
+// Old browser support for Object.defineProperty
+require('core-js/modules/es6.object.define-property');
