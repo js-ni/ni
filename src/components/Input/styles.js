@@ -1,20 +1,38 @@
 import styled from 'react-emotion';
 
 export const Wrapper = styled.div`
-  padding-top: 24px;
+  align-items: flex-end;
+  display: flex;
+  height: 48px;
+  margin-bottom: 8px;
+  margin-top: 16px;
 
   position: relative;
+
+  &:after {
+    content: "";
+    height: 1px;
+    width: 100%;
+
+    bottom: 0;
+    left: 0;
+    position: absolute;
+
+    background-color: ${props => props.focus ? '#212121' : props.hasError ? '#d50000' : 'rgba(0, 0, 0, .12)'};
+
+    transform-origin: center bottom;
+    transform: ${props => props.focus ? 'translateY(100%) scaleY(2)' : 'none'};
+    transition-duration: 180ms;
+    transition-property: background-color, transform;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+  }
 `;
 
 export const Input = styled.input`
   border: none;
-  display: block;
-  height: 24px;
-  line-height: 24px;
-  padding: 0;
+  line-height: normal;
+  padding: 0 0 8px;
   width: 100%;
-
-  font-size: 14px;
 
   outline: none;
 `;
@@ -24,56 +42,22 @@ export const Label = styled.label`
   margin: 0;
   width: 100%;
 
-  bottom: 5px;
+  bottom: 8px;
   left: 0;
   position: absolute;
 
-  font-size: 14px;
-
-  color: ${props => props.float && props.hasError ? '#d50000' : 'rgba(0, 0, 0, .35)' };
+  color: ${props => props.float ? '#212121' : props.hasError ? '#d50000' : 'rgba(0, 0, 0, .38)'};
   pointer-events: none;
-  transform: ${props => props.float ? 'scale(.75) translateY(-39px)' : 'none'};
-  transform-origin: bottom left;
 
-  transition-duration: .3s;
-  transition-property: bottom, color, transform;
+  transform-origin: left top;
+  transform: ${props => props.float ? 'scale(0.75, 0.75) translateY(-130%)' : 'none'};
+  transition-duration: 180ms;
+  transition-property: color, transform;
   transition-timing-function: cubic-bezier(.4, 0, .2, 1);
 `;
 
-export const Bar = styled.div`
-  display: block;
-  height: 1px;
-  width: 100%;
-
-  position: relative;
-
-  background-color: rgba(0, 0, 0, .12);
-
-  &:before,
-  &:after {
-    content: "";
-    height: 2px;
-    width: ${props => props.focus ? '50%' : 0 };
-
-    bottom: 0;
-    position: absolute;
-
-    background: ${props => props.hasError ? '#d50000' : '#4285f4' };
-
-    transition: all 0.3s cubic-bezier(.4, 0, .2, 1);
-  }
-
-  &:before {
-    left: 50%;
-  }
-
-  &:after {
-    right: 50%;
-  }
-`;
-
 export const ErrorMessage = styled.div`
-  margin-top: 5px;
+  line-height: 12px;
 
   font-size: 12px;
 

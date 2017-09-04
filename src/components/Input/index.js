@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 
 import {
-  Bar,
   ErrorMessage,
   Input as InputStyled,
   Label,
@@ -12,7 +11,7 @@ import {
 class Input extends PureComponent {
   static propTypes = {
     errorMessage: PropTypes.string,
-    id: PropTypes.oneOf([PropTypes.number, PropTypes.string]),
+    id: PropTypes.string,
     label: PropTypes.string,
     onChange: PropTypes.func
   }
@@ -56,7 +55,7 @@ class Input extends PureComponent {
 
     return (
       <div>
-        <Wrapper>
+        <Wrapper focus={this.state.focus} hasError={hasError}>
           <InputStyled
             id={id}
             onBlur={this.onBlur}
@@ -65,14 +64,15 @@ class Input extends PureComponent {
             value={value}
             {...props}
           />
-          <Label
-            float={value !== '' || this.state.focus}
-            hasError={hasError}
-            htmlFor={id}
-          >
-            {label}
-          </Label>
-          <Bar focus={this.state.focus} hasError={hasError} />
+          {label && (
+            <Label
+              float={value !== '' || this.state.focus}
+              hasError={hasError}
+              htmlFor={id}
+            >
+              {label}
+            </Label>
+          )}
         </Wrapper>
         {message}
       </div>
