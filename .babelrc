@@ -1,7 +1,7 @@
 {
   "plugins": [
     "relay",
-    "emotion/babel"
+    "emotion"
   ],
   "presets": [
     "react-app"

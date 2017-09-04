@@ -1,4 +1,4 @@
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 
 export const Wrapper = styled.div`
   padding-top: 24px;

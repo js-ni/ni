@@ -1,4 +1,4 @@
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import { Button as BaseButton } from 'reactstrap';
 
 export const Button = styled(BaseButton)`
