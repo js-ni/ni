@@ -1,0 +1,52 @@
+input CreateUserInput {
+  # The user's email.
+  email: String!
+
+  # The user's password.
+  password: String!
+
+  # The username used to login.
+  username: String!
+  clientMutationId: String
+}
+
+type CreateUserPayload {
+  # The new user.
+  user: User!
+  clientMutationId: String
+}
+
+# The root query for implementing GraphQL mutations.
+type Mutation {
+  # Creates a new user.
+  createUser(input: CreateUserInput!): CreateUserPayload
+}
+
+# An object with an ID
+interface Node {
+  # The id of the object.
+  id: ID!
+}
+
+# The query root of JSNI's GraphQL interface.
+type Query {
+  # Fetches an object given its ID
+  node(
+    # The ID of an object
+    id: ID!
+  ): Node
+  viewer: User
+}
+
+# A user is an individual's account on JSNI.
+type User implements Node {
+  # The ID of an object
+  id: ID!
+
+  # The user's email.
+  email: String
+
+  # The user's username.
+  username: String
+}
+
