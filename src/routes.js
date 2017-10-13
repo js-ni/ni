@@ -8,7 +8,9 @@ import Landing from './views/Landing';
 
 export default makeRouteConfig(
   <Route Component={App} path="/">
-    <Route Component={Landing} path="/" />
+    <Route
+        Component={Landing}
+    />
     <Route Component={SignUp} path="/user/new" />
   </Route>
 );
