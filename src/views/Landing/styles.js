@@ -11,7 +11,6 @@ injectGlobal`
 
 export const Wrapper = styled.div`
   margin: 0 auto;
-  max-width: 960px;
 `;
 
 export const Title = styled.div`
@@ -22,5 +21,5 @@ export const Title = styled.div`
 `;
 
 export const Image = styled.img`
-  
+
 `;
