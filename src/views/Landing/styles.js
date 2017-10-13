@@ -12,14 +12,3 @@ injectGlobal`
 export const Wrapper = styled.div`
   margin: 0 auto;
 `;
-
-export const Title = styled.div`
-  margin: 30px auto;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  font-size: 24px;
-`;
-
-export const Image = styled.img`
-
-`;

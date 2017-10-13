@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 
 import Header from '../../components/Header';
-import { Image, Title, Wrapper } from './styles';
+import { Wrapper } from './styles';
 
 class Landing extends PureComponent {
   render() {
