@@ -11,6 +11,7 @@ class Header extends PureComponent {
             <Item href="/learn">Aprende</Item>
             <Item href="/news">Noticias</Item>
             <Item href="/resources">Recursos</Item>
+            <Item href="/events">Eventos</Item>
           </Navigation>
         </Container>
       </Nav>

@@ -5,6 +5,7 @@ import App from './App';
 
 import SignUp from './views/SignUp';
 import Landing from './views/Landing';
+import Events from './views/Events';
 
 export default makeRouteConfig(
   <Route Component={App} path="/">
@@ -12,5 +13,7 @@ export default makeRouteConfig(
         Component={Landing}
     />
     <Route Component={SignUp} path="/user/new" />
+
+    <Route Component={Events} path="/events" />
   </Route>
 );
