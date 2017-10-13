@@ -7,7 +7,6 @@ class Header extends PureComponent {
     return (
       <Nav>
         <Container>
-          <Logo src="https://www.javascript.com/images/pages/shared/logo.svg" alt="Logo Comunidad JavaScript Nicaragua" />
           <Navigation>
             <Item href="/learn">Aprende</Item>
             <Item href="/news">Noticias</Item>
