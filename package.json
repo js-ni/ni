@@ -52,6 +52,7 @@
     "react-dom": "15.6.1",
     "react-emotion": "7.2.0",
     "react-error-overlay": "^1.0.10",
+    "react-fa": "^5.0.0",
     "react-relay": "1.1.0",
     "react-router-dom": "4.1.2",
     "react-transition-group": "2.2.0",

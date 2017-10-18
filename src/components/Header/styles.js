@@ -13,8 +13,18 @@ export const Container = styled.div`
   margin: 0 20px;
 `;
 
-export const Logo = styled.img`
+export const Title = styled.h1`
+  text-align: center;
+  font-size: 28px;
+  color: #FFFFFF;
+  margin-top: 18px;
+  font-weight: bold;
+`;
 
+export const SubTitle = styled.h2`
+  text-align: center;
+  font-size: 14px;
+  color: #2e2e2d;
 `;
 
 export const Navigation = styled.div`
