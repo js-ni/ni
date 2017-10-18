@@ -25,13 +25,13 @@ class Landing extends PureComponent {
             <Event>
               <EventTitle>Hackathon Nicaragua 2017</EventTitle>
               <EventDate>
-                <Icon fixedWidth={true} name="calendar-check-o" /> Sábado 25 de noviembre 2015
+                <Icon fixedWidth={true} name="calendar-check-o" /> Sábado 25 de noviembre 2017
               </EventDate>
               <EventPlace>
                 <Icon fixedWidth={true} name="map-marker"/> Centro De Convenciones Olof Palme
               </EventPlace>
               <EventLocation>
-              <Icon fixedWidth={true} name="map-o"/> Managua
+                <Icon fixedWidth={true} name="map-o"/> Managua
               </EventLocation>
             </Event>
             <Event>
