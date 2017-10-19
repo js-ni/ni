@@ -4,6 +4,8 @@
 
 > Sitio web para la comunidad de desarrolladores JavaScript Nicaragua.
 
+Para contribuir de forma activa solicita ser miembro del [equipo del sitio web](https://github.com/orgs/js-ni/teams/website/members) creando un issue con el título: [**Member teams/website**.](https://github.com/js-ni/ni/issues/new?title=Member teams/website)
+
 # development
 
     $ yarn
