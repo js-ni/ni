@@ -16,6 +16,9 @@ class Landing extends PureComponent {
             <AboutText>Nos reunimos para socializar y comer pizza, compartimos conocimientos mediante charlas presenciales o vía hangouts. Creamos capital social para tener nuevas oportunidades de empleo.</AboutText>
           </Features>
           <Networks>
+            <Network href="https://medium.com/javascript-nicaragua" target="_blank">
+              <Icon size="4x" name="medium" /><br />Blog en medium
+            </Network>
             <Network href="http://github.com/js-ni" target="_blank">
               <Icon size="4x" name="github" /><br />Github
             </Network>
