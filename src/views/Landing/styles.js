@@ -118,11 +118,13 @@ export const Networks = styled.div`
   background-attachment: fixed;
   padding: 80px 0;
   text-align: center;
+  display: flex;
+  flex-flow: row;
 `;
 
 export const Network = styled.a`
   color: #e5bb31;
-
+  flex: 1;
   &:hover {
     text-decoration: none;
   }

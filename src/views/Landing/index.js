@@ -19,6 +19,12 @@ class Landing extends PureComponent {
             <Network href="http://github.com/js-ni" target="_blank">
               <Icon size="4x" name="github" /><br />Github
             </Network>
+            <Network href="https://www.facebook.com/JavaScriptNi/" target="_blank">
+              <Icon size="4x" name="facebook" /><br />Facebook
+            </Network>
+            <Network href="https://twitter.com/nodenica" target="_blank">
+              <Icon size="4x" name="twitter" /><br />Twitter
+            </Network>
           </Networks>
           <Events>
             <AboutTitle>Eventos</AboutTitle>
