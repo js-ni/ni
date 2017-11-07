@@ -22,8 +22,6 @@ function commit(environment, data) {
         ...data,
         clientMutationId: tempID++
       }
-    },
-    updater(store) {
     }
   });
 }
