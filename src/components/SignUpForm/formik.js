@@ -1,10 +1,10 @@
-import { Formik } from 'formik';
+import { withFormik } from 'formik';
 import Yup from 'yup';
 
 import environment from '../../relayEnvironment';
 import CreateUserMutation from '../../mutations/CreateUserMutation';
 
-export default Formik({
+export default withFormik({
   mapPropsToValues: () => {
     return {
       email: '',

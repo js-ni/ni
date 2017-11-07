@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 4527b8aabf1c799f0e247ddd4f175cbf
+ * @relayHash 4b79b8e78ef1923b6d0837eb950071aa
  */
 
 /* eslint-disable */
@@ -17,7 +17,6 @@ export type CreateUserMutationVariables = {|
     clientMutationId?: ?string;
   };
 |};
-
 export type CreateUserMutationResponse = {|
   +createUser: ?{|
     +user: {|
