@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import {Icon} from 'react-fa';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -17,16 +17,20 @@ class Landing extends PureComponent {
           </Features>
           <Networks>
             <Network href="https://medium.com/javascript-nicaragua" target="_blank">
-              <Icon size="4x" name="medium" /><br />Blog en medium
+              <FontAwesomeIcon icon={['fab', 'medium-m']} size="4x" />
+              <div>Blog en medium</div>
             </Network>
             <Network href="http://github.com/js-ni" target="_blank">
-              <Icon size="4x" name="github" /><br />Github
+              <FontAwesomeIcon icon={['fab', 'github']} size="4x" />
+              <div>Github</div>
             </Network>
             <Network href="https://www.facebook.com/JavaScriptNi/" target="_blank">
-              <Icon size="4x" name="facebook" /><br />Facebook
+              <FontAwesomeIcon icon={['fab', 'facebook-f']} size="4x" />
+              <div>Facebook</div>
             </Network>
             <Network href="https://twitter.com/nodenica" target="_blank">
-              <Icon size="4x" name="twitter" /><br />Twitter
+              <FontAwesomeIcon icon={['fab', 'twitter']} size="4x" />
+              <div>Twitter</div>
             </Network>
           </Networks>
           <Events>
@@ -34,25 +38,25 @@ class Landing extends PureComponent {
             <Event>
               <EventTitle>Hackathon Nicaragua 2017</EventTitle>
               <EventDate>
-                <Icon fixedWidth={true} name="calendar-check-o" /> Sábado 25 de noviembre 2017
+                <FontAwesomeIcon icon="calendar-check" /> Sábado 25 de noviembre 2017
               </EventDate>
               <EventPlace>
-                <Icon fixedWidth={true} name="map-marker"/> Centro De Convenciones Olof Palme
+                <FontAwesomeIcon icon="map-pin" /> Centro De Convenciones Olof Palme
               </EventPlace>
               <EventLocation>
-                <Icon fixedWidth={true} name="map-o"/> Managua
+                <FontAwesomeIcon icon="map" /> Managua
               </EventLocation>
             </Event>
             <Event>
               <EventTitle>CoffeeJS</EventTitle>
               <EventDate>
-                <Icon fixedWidth={true} name="calendar-check-o" /> Sin definir.
+                <FontAwesomeIcon icon="calendar-check" /> Sin definir.
               </EventDate>
               <EventPlace>
-                <Icon fixedWidth={true} name="map-marker"/> Rain Agency
+                <FontAwesomeIcon icon="map-pin" /> Rain Agency
               </EventPlace>
               <EventLocation>
-                <Icon fixedWidth={true} name="map-o"/> KM 8.5 Carretera Masaya, De semáforos Santo Domingo 2 c oeste 25 vrs sur, Mirador Norte Santo Domingo, Managua 14236
+                <FontAwesomeIcon icon="map" /> KM 8.5 Carretera Masaya, De semáforos Santo Domingo 2 c oeste 25 vrs sur, Mirador Norte Santo Domingo, Managua 14236
               </EventLocation>
             </Event>
           </Events>

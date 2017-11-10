@@ -4,6 +4,7 @@ import { Resolver } from 'found-relay';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import './icons';
 import registerServiceWorker from './registerServiceWorker';
 import environment from './relayEnvironment';
 import routes from './routes';
