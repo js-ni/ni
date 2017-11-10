@@ -1,6 +1,9 @@
 import { injectGlobal } from 'emotion';
 import styled from 'react-emotion';
 
+import computer from './computer.jpg';
+import event from './event.jpg';
+
 injectGlobal`
   body {
     margin: 0;
@@ -15,7 +18,7 @@ export const Wrapper = styled.div`
 
 export const Features = styled.div`
   position: relative;
-  background-image: url(http://www.beerjs.cl/assets/images/que.jpg);
+  background-image: url(${computer});
   background-size: cover;
   background-repeat: repeat;
   background-attachment: fixed;
@@ -59,7 +62,7 @@ export const AboutText = styled.div`
 export const Events = styled.div`
   position: relative;
   background-size: cover;
-  background-image: url(https://www.fragomen.com/sites/default/files/styles/xl_image/public/Events_Portal.jpg);
+  background-image: url(${event});
   background-repeat: repeat;
   background-attachment: fixed;
   padding: 80px 0;
