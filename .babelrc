@@ -4,6 +4,7 @@
     "emotion"
   ],
   "presets": [
+    "flow",
     "react-app"
   ]
 }

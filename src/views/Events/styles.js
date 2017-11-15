@@ -3,81 +3,49 @@ import styled from 'react-emotion';
 
 injectGlobal`
   body {
-    margin: 0;
-    padding: 0;
-    background-color: #FFFFFF !important;
+    background-color: #f5f6f7 !important;
   }
 `;
 
-export const Wrapper = styled.div`
-  margin: 0 auto;
-  position: relative;
+export const Box = styled('div')`
+  margin-bottom: 40px;
+
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
   overflow: hidden;
 `;
 
-export const Container = styled.div`
-  padding: 0 20px;
-  position: relative;
-  overflow: hidden;
+export const Market = styled('div')`
+  align-items: center;
+  display: flex;
+  height: 20px;
+  justify-content: center;
+  padding: 8px;
+  width: 20px;
+
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .35);
+  color: #e5bb31;
+  cursor: pointer;
 `;
 
-export const Posts = styled.div`
-  position: relative;
-  width: 66%;
-  box-sizing: border-box;
-  padding-left: 40px;
-  float: left;
-  margin-top: 80px;
-`;
+export const Title = styled('h1')`
+  margin-top: 30px;
 
-export const Sidebar = styled.div`
-  width: 33%;
-  box-sizing: border-box;
-  padding: 90px 40px;
-  background-color: #f9f9f7;
-  float: right;
-  position: relative;
-  overflow: hidden;
-`;
-
-export const Alert = styled.div`
-  background: #fff;
-  border-radius: 6px;
-  padding: 20px;
-  position: relative;
-  overflow: hidden;
-`;
-
-export const AlertTitle = styled.h1`
   font-size: 18px;
-  font-weight: bold;
+
+  color: #4a4a4a;
+`;
+
+export const List = styled('div')`
+`;
+
+export const ListTitle = styled('h2')`
+  border-bottom: 1px solid #f1f1f1;
   margin: 0;
-  padding: 0;
-`;
+  padding: 20px;
 
-export const Post = styled.div`
-  padding: 10px 10px 20px 10px;
-  border-bottom: 1px solid #efefef;
-`;
-
-export const PostTitle = styled.h1`
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  padding: 0;
-`;
-
-export const PostDate = styled.h1`
-  font-size: 14px;
-  color: #4b4f56;
-`;
-
-export const PostPlace = styled.h1`
-  font-size: 12px;
-  color: #4b4f56;
-`;
-
-export const PostLocation = styled.h1`
-  font-size: 12px;
-  color: #90949c;
+  font-size: 16px;
 `;

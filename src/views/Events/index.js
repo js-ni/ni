@@ -1,37 +1,60 @@
+// @flow
+
+import GoogleMapReact from 'google-map-react';
 import React, { PureComponent } from 'react';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { Container } from 'reactstrap';
 
-import Header from '../../components/Header';
+import Event from '../../components/Event';
 import Footer from '../../components/Footer';
-import { Wrapper, Container, Posts, Sidebar, Alert, AlertTitle, Post, PostTitle, PostDate, PostPlace, PostLocation } from './styles';
+import Header from '../../components/Header';
 
-class Events extends PureComponent {
+import events from './events';
+import {
+  Box,
+  ListTitle,
+  Market,
+  Title
+} from './styles';
+
+class Events extends PureComponent<{}> {
   render() {
     return (
-      <Wrapper>
+      <div>
         <Header />
+
         <Container>
-          <Posts>
-            <Post>
-              <PostTitle>Hackathon Nicaragua 2017</PostTitle>
-              <PostDate>25 de noviembre</PostDate>
-              <PostPlace>Centro De Convenciones Olof Palme</PostPlace>
-              <PostLocation>Managua</PostLocation>
-            </Post>
-            <Post>
-              <PostTitle>CoffeeJS</PostTitle>
-              <PostDate>Sin definir.</PostDate>
-              <PostPlace>Rain Agency</PostPlace>
-              <PostLocation>Managua</PostLocation>
-            </Post>
-          </Posts>
-          <Sidebar>
-            <Alert>
-              <AlertTitle>Aquí encontraras todos los eventos de la comunidad.</AlertTitle>
-            </Alert>
-          </Sidebar>
+          <Title>Eventos</Title>
+          <p>Aquí encontraras todos los eventos de la comunidad.</p>
+
+          <Box style={{ height: 280, marginTop: 30 }}>
+            <GoogleMapReact
+              defaultCenter={[12.1087017, -86.2555539]}
+              defaultZoom={11}
+            >
+              {events.map(event =>
+                <Market
+                  key={event.name}
+                  lat={event.lat}
+                  lng={event.lon}
+                >
+                  <FontAwesomeIcon icon="map" size="sm" />
+                </Market>
+              )}
+            </GoogleMapReact>
+          </Box>
+
+          <Box>
+            <ListTitle>Próximos Eventos</ListTitle>
+
+            {events.map(event =>
+              <Event key={event.name} event={event} />
+            )}
+          </Box>
         </Container>
+
         <Footer />
-      </Wrapper>
+      </div>
     );
   }
 }
