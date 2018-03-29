@@ -1,8 +1,46 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import LogoImage from './logo.png';
+import scrollTo from 'scroll-to';
 
 class Header extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      home: props.home,
+      events: props.events,
+      blog: props.blog,
+      repositories: props.repositories
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      home: nextProps.home,
+      events: nextProps.events,
+      blog: nextProps.blog,
+      repositories: nextProps.repositories
+    });
+  }
+
+  // to move scroll to component
+  goTo = (e) => {
+    const node = this.state[e.target.id];
+
+    if (node){
+      var calculatedHeight = node.clientHeight;
+      
+      scrollTo(0, calculatedHeight, {
+        ease: 'out-bounce',
+        duration: 1500
+      });
+    }
+
+    e.preventDefault();
+  }
+
   render() {
     return (
       <Wrapper>
@@ -10,16 +48,16 @@ class Header extends Component {
         <Title>JavaScript Nicaragua</Title>
         <Navigation>
           <Item>
-            <Link href="#">Inicio</Link>
+            <Link href="#" onClick={this.goTo} id="home">Inicio</Link>
           </Item>
           <Item>
-            <Link href="#">Eventos</Link>
+            <Link href="#" onClick={this.goTo} id="events">Eventos</Link>
           </Item>
           <Item>
-            <Link href="#">Blog</Link>
+            <Link href="#" onClick={this.goTo} id="blog">Blog</Link>
           </Item>
           <Item>
-            <Link href="#">Proyectos</Link>
+            <Link href="#" onClick={this.goTo} id="repositories">Proyectos</Link>
           </Item>
         </Navigation>
       </Wrapper>
@@ -70,5 +108,9 @@ const Link = styled.a`
   text-transform: none;
   padding: 0 24px;
 `;
+
+Header.propTypes = {
+  events: PropTypes.object
+}
 
 export default Header;
