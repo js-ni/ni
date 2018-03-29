@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Welcome from './components/Welcome';
 import Blog from './components/Blog';
 import Events from './components/Events';
+import Footer from './components/Footer';
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
         <Welcome />
         <Blog />
         <Events />
+        <Footer />
       </div>
     );
   }
