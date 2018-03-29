@@ -27,12 +27,12 @@ class Header extends Component {
 
   // to move scroll to component
   goTo = (e) => {
+    let height = 0;
     const node = this.state[e.target.id];
 
     if (node){
-      var calculatedHeight = node.clientHeight;
-      
-      scrollTo(0, calculatedHeight, {
+      height = (e.target.id === 'events') ? 343 : height;
+      scrollTo(0, height, {
         ease: 'out-bounce',
         duration: 1500
       });
@@ -110,7 +110,8 @@ const Link = styled.a`
 `;
 
 Header.propTypes = {
-  events: PropTypes.object
+  events: PropTypes.object,
+  blog: PropTypes.object
 }
 
 export default Header;

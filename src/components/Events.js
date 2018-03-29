@@ -1,3 +1,9 @@
+/**
+ * Events component
+ *
+ * events.json is generated with https://bit.ly/2GGShnQ
+ */
+
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Grid, Card, Image, Icon } from 'semantic-ui-react';
@@ -73,7 +79,7 @@ class Events extends Component {
 
     // return grid
     return (
-      <Grid columns='equal'>
+      <Grid columns={3}>
         <Grid.Row>
           { items }
         </Grid.Row>

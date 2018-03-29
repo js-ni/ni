@@ -1,0 +1,20 @@
+[
+  {
+    "id": "45f36dd672b3",
+    "title": "Deshabilitar el componente explorador de Loopback en producción",
+    "publishedAt": "28 de Marzo del 2018",
+    "description": "El componente de explorador de Loopback es muy útil durante el desarrollo de nuestra API..."
+  },
+  {
+    "id": "7c275af9c4b9",
+    "title": "Hyper — Emulador de terminal 100% escrito en JavaScript.",
+    "publishedAt": "5 de Marzo del 2018",
+    "description": "Hiper es un emulador de terminal escrito 100% en JavaScript, HTML y CSS. Es 100% hackeable (a como cuando conocimos Atom)."
+  },
+  {
+    "id": "90fd49ea4fda",
+    "title": "Linter en Atom para proyectos ReactJS",
+    "publishedAt": "27 de Febrero del 2018",
+    "description": "Atom es un excelente editor creado por Github. Generalmente lo uso para desarrollar aplicaciones JavaScript."
+  }
+]

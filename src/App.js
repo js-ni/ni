@@ -9,13 +9,15 @@ class App extends Component {
     super(props);
 
     this.state = {
-      events: {}
+      events: {},
+      blog: {}
     };
   }
 
   componentDidMount() {
     this.setState({
-      events: ReactDOM.findDOMNode(this.refs.events)
+      events: ReactDOM.findDOMNode(this.refs.events),
+      blog: ReactDOM.findDOMNode(this.refs.blog)
     })
   }
 
@@ -23,7 +25,7 @@ class App extends Component {
     return (
       <div>
         <Header events={ this.state.events } />
-        <Blog />
+        <Blog ref={ 'blog' } />
         <Events ref={ 'events' } />
       </div>
     );
