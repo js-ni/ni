@@ -9,6 +9,7 @@ import styled from 'styled-components';
 import { Grid, Card, Image, Icon } from 'semantic-ui-react';
 import Data from './events.json';
 import Moment from 'moment';
+import event from './event.jpg';
 
 class Events extends Component {
 
@@ -91,12 +92,14 @@ class Events extends Component {
   render() {
     Moment.locale('es');
     return (
-      <Wrapper>
-        <Title>
-          Eventos
-        </Title>
-        { this.renderEvents() }
-      </Wrapper>
+      <Container>
+        <Wrapper>
+          <Title>
+            Eventos
+          </Title>
+          { this.renderEvents() }
+        </Wrapper>
+      </Container>
     );
   }
 }
@@ -106,12 +109,31 @@ const Wrapper = styled.div`
   margin 0 auto;
   position: relative;
   overflow: hidden;
-  background-color: #ffffff;
   padding: 30px 5px;
 `;
 
-const Title = styled.h1`
-
+export const Container = styled.div`
+  position: relative;
+  background-size: cover;
+  background-image: url(${event});
+  background-repeat: repeat;
+  background-attachment: fixed;
+  padding: 80px 0;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2C3E50;
+    opacity: .9;
+  }
 `;
+
+const Title = styled.h1`
+  color: #ffffff;
+`;
+
 
 export default Events;

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Item } from 'semantic-ui-react';
 import Data from './blog.json';
+import imageMedium from './img_medium.png'
 
 class Blog extends Component {
 
@@ -14,7 +15,7 @@ class Blog extends Component {
     let items = Data.map((item, index) => {
       return (
         <Item key={index}>
-          <Item.Image size='tiny' src='https://react.semantic-ui.com/assets/images/wireframe/image.png' />
+          <Item.Image size='tiny' src={imageMedium} />
           <Item.Content>
             <Item.Header as='a' href={ this.mediumPostUrl(item.id) }>
               { item.title }

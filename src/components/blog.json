@@ -16,5 +16,17 @@
     "title": "Linter en Atom para proyectos ReactJS",
     "publishedAt": "27 de Febrero del 2018",
     "description": "Atom es un excelente editor creado por Github. Generalmente lo uso para desarrollar aplicaciones JavaScript."
+  },
+  {
+    "id": "a9f86b67e67c",
+    "title": "Establecer título a las páginas en ReactJS",
+    "publishedAt": "27 de Febrero del 2018",
+    "description": "Casco toma etiquetas HTML simples y genera etiquetas HTML sencillas. Es completamente simple y reacciona amigable para principiantes."
+  },
+  {
+    "id": "66193af10694",
+    "title": "Lanzar sitio web construido con React en Heroku",
+    "publishedAt": "27 de Febrero del 2018",
+    "description": "Instalamos el generador de aplicaciones de react."
   }
 ]
