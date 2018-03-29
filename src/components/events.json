@@ -1,0 +1,39 @@
+[
+  {
+    "description": "Charlas sobre JavaScript.\n\n* Web scraping con NodeJS - Paulo McNally.\n* Crear un CLI con NodeJS - Paulo McNally.\n\nPizza patrocinada por: DAK42.\nLocal: Chocoyo Labs",
+    "end_time": "2018-03-24T16:00:00-0600",
+    "name": "Coffee JS - Marzo 2018",
+    "place": {
+      "name": "Chocoyo Labs",
+      "location": {
+        "city": "Managua",
+        "country": "Nicaragua",
+        "latitude": 12.136062922753,
+        "longitude": -86.266359686852,
+        "street": "De la DGI o TransNica 300 metros al norte, contiguo a Joyería Garzon."
+      },
+      "id": "1551848665142527"
+    },
+    "start_time": "2018-03-24T14:00:00-0600",
+    "id": "1836388649997571"
+  },
+  {
+    "description": "Charlas sobre JavaScript.\n\n* Crear un componente para ReactJS y publicarlo en NPM. - Paulo McNally.\n* Next.JS - A minimalistic React Framework - Oscar Cortez.\n* Angular - Primeros pasos - Luís Guido.",
+    "end_time": "2018-02-24T17:00:00-0600",
+    "name": "Coffee JS - Febrero 2018",
+    "place": {
+      "name": "Buffet Restaurante Espino Negro",
+      "location": {
+        "city": "Tipitapa",
+        "country": "Nicaragua",
+        "latitude": 12.201759494,
+        "longitude": -86.095476274,
+        "street": "505",
+        "zip": "505"
+      },
+      "id": "784905778244064"
+    },
+    "start_time": "2018-02-24T14:00:00-0600",
+    "id": "151217388910423"
+  }
+]
