@@ -9,14 +9,14 @@
     "react-dom": "16.6.0",
     "react-scripts": "2.0.5",
     "semantic-ui-react": "^0.79.0",
-    "styled-components": "^3.2.3"
+    "styled-components": "4.0.2"
   },
   "scripts": {
-    "deploy": "react-scripts build && cp CNAME build/ && gh-pages -d build",
-    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "deploy": "react-scripts build && cp CNAME build/ && gh-pages -d build",
+    "eject": "react-scripts eject",
+    "start": "react-scripts start",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": "react-app"
