@@ -42,7 +42,7 @@ class Events extends Component {
       // render card with content
       return (
         <Grid.Column key={index}>
-          <Card>
+          <Card fluid>
             <Image src={ this.staticMapUrl(item.place.location.latitude, item.place.location.longitude) } />
             <Card.Content>
               <Card.Header>
@@ -80,8 +80,8 @@ class Events extends Component {
 
     // return grid
     return (
-      <Grid columns={3}>
-        <Grid.Row>
+      <Grid stackable centered columns={3} textAlign='center'>
+        <Grid.Row centered>
           { items }
         </Grid.Row>
       </Grid>
@@ -105,7 +105,7 @@ class Events extends Component {
 }
 
 const Wrapper = styled.div`
-  width: 948px;
+  max-width: 948px;
   margin 0 auto;
   position: relative;
   overflow: hidden;
