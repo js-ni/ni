@@ -8317,6 +8317,11 @@ sane@^2.0.0:
   optionalDependencies:
     fsevents "^1.2.3"
 
+sanitize.css@8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/sanitize.css/-/sanitize.css-8.0.0.tgz#b025845b772a2c0c996e62e3b2d1bbf10ca78e37"
+  integrity sha512-Ru+piIyTyioaaOj/pbJEo57lMXV70FV07AslpZ8K2Me8B2021v2Nx0Wq5hf29/fNwdjsXLdTbf4Ypmk24PnPtQ==
+
 sass-loader@7.1.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-7.1.0.tgz#16fd5138cb8b424bf8a759528a1972d72aad069d"

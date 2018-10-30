@@ -7,3 +7,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1e70bf;
+}

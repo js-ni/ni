@@ -1,35 +1,26 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import React from 'react';
+import {Flex, Text} from 'rebass';
 
-class Footer extends Component {
-  render() {
-    return (
-      <Container>
-        <Copyright>Comunidad de desarrolladores JavaScript de Nicaragua</Copyright>
-        <Domain href="http://js.org" target="_blank" title="JS.ORG | JavaScript Community">
-          <Logo src="https://logo.js.org/bright_horz.png" width="102" alt="JS.ORG Logo"/>
-        </Domain>
-      </Container>
-    );
-  }
+function Footer() {
+  return (
+    <Flex alignItems="center" bg="#273531" justifyContent="space-between" p={4}>
+      <Text color="#6d7d79">
+        Comunidad de desarrolladores JavaScript de Nicaragua
+      </Text>
+      <a
+        href="http://js.org"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="JS.ORG | JavaScript Community"
+      >
+        <img
+          alt="JS.ORG Logo"
+          src="https://logo.js.org/bright_horz.png"
+          width="102"
+        />
+      </a>
+    </Flex>
+  );
 }
-
-const Container = styled.div`
-  background-color: #273531;
-  height: 120px;
-  line-height: 120px;
-  padding: 0 20px;
-`;
-
-const Copyright = styled.span`
-  color: #6d7d79;
-`;
-
-const Domain = styled.a`
-  float: right;
-`;
-
-const Logo = styled.img`
-`;
 
 export default Footer;
