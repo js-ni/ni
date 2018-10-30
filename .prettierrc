@@ -1,0 +1,6 @@
+{
+  "bracketSpacing": false,
+  "parser": "babylon",
+  "singleQuote": true,
+  "trailingComma": "es5"
+}
