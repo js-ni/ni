@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@js-ni/medium-posts": "0.1.1",
     "gh-pages": "^1.1.0",
     "moment": "^2.21.0",
-    "react": "16.6.0",
-    "react-dom": "16.6.0",
+    "react": "16.7.0-alpha.0",
+    "react-dom": "16.7.0-alpha.0",
     "react-scripts": "2.0.5",
+    "rebass": "3.0.0-9",
     "semantic-ui-react": "^0.79.0",
     "styled-components": "4.0.2"
   },
@@ -19,7 +21,21 @@
     "test": "react-scripts test"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "styled-components",
+            "message": "Please import from styled-components/macro."
+          }
+        ],
+        "patterns": [
+          "!styled-components/macro"
+        ]
+      }
+    ]
   },
   "browserslist": [
     ">0.2%",
