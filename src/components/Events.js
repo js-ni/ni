@@ -15,7 +15,7 @@ class Events extends Component {
 
   // Url from static map
   staticMapUrl(latitude, longitude) {
-    return `https://maps.googleapis.com/maps/api/staticmap?center=${latitude},${longitude}&zoom=16&size=400x200&markers=color:red%7Clabel:%7C${latitude},${longitude}`;
+    return `https://maps.googleapis.com/maps/api/staticmap?center=${latitude},${longitude}&zoom=16&size=400x200&markers=color:red%7Clabel:%7C${latitude},${longitude}&key=AIzaSyC5YSkpeBuJyiBp0BnkWBW6Es3CQPymD84`;
   }
 
   // Url from google maps
