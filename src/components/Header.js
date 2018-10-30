@@ -1,29 +1,19 @@
-import React, { Component } from 'react';
-import styled from 'styled-components';
+import React from 'react';
+import {Box, Heading} from 'rebass';
 
-class Header extends Component {
-  render() {
-    return (
-      <Wrapper>
-        <Title>Comunidad JavaScript de Nicaragua</Title>
-      </Wrapper>
-    );
-  }
+function Header() {
+  return (
+    <Box bg="#f7df1f" py={20} css={{borderBottom: '1px solid #bdbdbd'}}>
+      <Heading
+        as="h1"
+        color="#2d2d2d"
+        children="Comunidad JavaScript de Nicaragua"
+        fontSize={5}
+        fontWeight="normal"
+        textAlign="center"
+      />
+    </Box>
+  );
 }
-
-const Wrapper = styled.div`
-  position: relative;
-  background-color: #f7df1f;
-  border-bottom: 1px solid #bdbdbd;
-  text-align: center;
-`;
-
-const Title = styled.h1`
-  color: #2d2d2d;
-  font-weight: normal;
-  font-size: 26px;
-  padding: 20px;
-  font-weight: bold;
-`;
 
 export default Header;

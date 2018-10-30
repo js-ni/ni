@@ -1,61 +1,57 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import computer from './computer.jpg';
+import {Box, Heading, Text} from 'rebass';
 
-class Welcome extends Component {
+import bgImage from './computer.jpg';
 
-  // react render
-  render() {
-    return (
-      <Features>
-        <AboutTitle>¿Quiénes somos?</AboutTitle>
-        <AboutText>Somos un grupo de desarrolladores que nos reunimos para hablar acerca de librerías, frameworks y todo lo relacionado a JavaScript.</AboutText>
-        <AboutText>Nos reunimos para socializar y comer pizza, compartimos conocimientos mediante charlas presenciales o vía hangouts. Creamos capital social para tener nuevas oportunidades de empleo.</AboutText>
-      </Features>
-    );
-  }
-}
-
-const Features = styled.div`
+const Container = styled.div`
   position: relative;
-  background-image: url(${computer});
+
+  background-image: url(${bgImage});
   background-size: cover;
   background-repeat: repeat;
   background-attachment: fixed;
-  padding: 80px 0;
+
   &:before {
-    content: "";
-    position: absolute;
-    top: 0px;
+    content: '';
+
+    bottom: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: #2C3E50;
-    opacity: .9;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    background-color: rgba(44, 62, 80, 0.9);
   }
 `;
 
-const AboutTitle = styled.div`
-  text-align: center;
-  padding: 10px 15px;
-  max-width: 600px;
-  position: relative;
-  z-index: 99;
-  color: #f1f1f1;
-  margin: 0 auto;
-  font-size: 36px;
-  font-weight: bold;
-`;
-
-const AboutText = styled.div`
-  text-align: center;
-  padding: 20px 15px;
-  max-width: 600px;
-  position: relative;
-  z-index: 99;
-  color: #f1f1f1;
-  margin: 0 auto;
-  font-size: 1rem;
-`;
+function Welcome() {
+  return (
+    <Container>
+      <Box
+        color="#f1f1f1"
+        px={3}
+        py={5}
+        css={{
+          margin: '0 auto',
+          maxWidth: '600px',
+          position: 'relative',
+          textAlign: 'center',
+        }}
+      >
+        <Heading fontSize={5}>¿Quiénes somos?</Heading>
+        <Text fontSize={2} lineHeight={1.5} mt={4}>
+          Somos un grupo de desarrolladores que nos reunimos para hablar acerca
+          de librerías, frameworks y todo lo relacionado a JavaScript.
+        </Text>
+        <Text fontSize={2} lineHeight={1.5} mt={3}>
+          Nos reunimos para socializar y comer pizza, compartimos conocimientos
+          mediante charlas presenciales o vía hangouts. Creamos capital social
+          para tener nuevas oportunidades de empleo.
+        </Text>
+      </Box>
+    </Container>
+  );
+}
 
 export default Welcome;
