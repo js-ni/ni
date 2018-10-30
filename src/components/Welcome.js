@@ -30,6 +30,7 @@ function Welcome() {
     <Container>
       <Box
         color="#f1f1f1"
+        px={3}
         py={5}
         css={{
           margin: '0 auto',

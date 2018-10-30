@@ -34,7 +34,7 @@ function Events() {
         css={{maxWidth: '948px', position: 'relative'}}
         m="0 auto"
         px={[3, 4, 0]}
-        py={4}
+        py={5}
         width={[null]}
       >
         <Heading color="white" fontSize={28} fontWeight="normal">

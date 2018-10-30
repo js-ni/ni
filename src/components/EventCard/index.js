@@ -17,7 +17,7 @@ function EventCard(props) {
 
   return (
     <Card bg="white" borderRadius={4} css={{overflow: 'hidden'}}>
-      <Image src={buildStaticMapUrl(latitude, longitude)} />
+      <Image alt={props.name} src={buildStaticMapUrl(latitude, longitude)} />
       <Box color="#777" p={3} css={{lineHeight: '24px'}}>
         <Heading fontSize={3}>
           <Link

@@ -13,7 +13,7 @@ function App() {
       <Header />
       <Welcome />
       <Box bg="#eff1f5">
-        <Box m="0 auto" px={[3, 4, 0]} py={4} css={{maxWidth: '948px'}}>
+        <Box m="0 auto" px={[3, 4, 0]} py={5} css={{maxWidth: '948px'}}>
           <MediumPosts />
         </Box>
       </Box>
