@@ -4,7 +4,7 @@ import {OrganizationMembers} from './view'
 
 /**
  * Displays a list of public members of a Github organization.
- * This class handle the backend retrieval of the members list.
+ * This class handles the backend retrieval of the members list.
  *
  * Props required:
  * - orgName: Name of the organization whose members are to be displayed

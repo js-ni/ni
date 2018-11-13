@@ -6,7 +6,7 @@ import {Box} from 'rebass';
  * the member profile picture with a link to member profile.
  *
  * Props required:
- * - member: A dictionay of a Github profile that has a least the avatar and username
+ * - member: A dictionay of a Github profile that has at least the avatar and username
  */
 export class MemberProfile extends React.Component {
     render() {
