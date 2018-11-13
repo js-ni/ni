@@ -1,6 +1,13 @@
 import React from 'react'
 import {Box} from 'rebass';
 
+/**
+ * Element that displays a Github profile card. For now it only displays
+ * the member profile picture with a link to member profile.
+ *
+ * Props required:
+ * - member: A dictionay of a Github profile that has a least the avatar and username
+ */
 export class MemberProfile extends React.Component {
     render() {
         return (
@@ -15,6 +22,12 @@ export class MemberProfile extends React.Component {
 }
 
 
+/**
+ * Displays a list of github profiles. Each profile is displayed in a MemberProfile element
+ *
+ * Props required:
+ * - members: An array of github dictinaries profiles
+ */
 export class OrganizationMembers extends React.Component {
     render() {
         return (

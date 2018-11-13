@@ -1,3 +1,7 @@
+/**
+ * This file is used as a fallback data on an API request failure.
+ */
+
 export const KNOWN_MEMBERS = [
     {
       "login": "LaurenceM10",

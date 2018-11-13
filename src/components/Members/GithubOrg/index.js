@@ -1,5 +1,8 @@
 const cache = require('./cache')
 
+/**
+ * Provides methods to access public organization data on Github
+ */
 export default class GithubOrg {
     constructor (organizationName) {
         this.organization = organizationName
