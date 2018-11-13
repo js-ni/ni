@@ -26,10 +26,6 @@ export default class OrgMembersDisplay extends React.Component {
         })
     }
 
-    componentWillMount = () => {
-
-    }
-
     render = () => {
         return (
             <OrganizationMembers members={this.state.members} />
