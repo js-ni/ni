@@ -1,6 +1,6 @@
-import React from 'react'
-import GithubOrg from './GithubOrg'
-import {OrganizationMembers} from './view'
+import React from 'react';
+import GithubOrg from './GithubOrg';
+import {OrganizationMembers} from './view';
 
 /**
  * Displays a list of public members of a Github organization.
@@ -10,28 +10,26 @@ import {OrganizationMembers} from './view'
  * - orgName: Name of the organization whose members are to be displayed
  */
 export default class OrgMembersDisplay extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {members: [], pending: true, error: false}
-    }
+  constructor(props) {
+    super(props);
+    this.state = {members: [], pending: true, error: false};
+  }
 
-    componentDidMount() {
-        // Load the organization members
-        const org = new GithubOrg(this.props.orgName)
-        org.publicMembers().then(members => {
-            this.setState({members, pending: false})
+  componentDidMount() {
+    // Load the organization members
+    const org = new GithubOrg(this.props.orgName);
+    org
+      .publicMembers()
+      .then(members => {
+        this.setState({members, pending: false});
+      })
+      .catch(error => {
+        console.error(error);
+        this.setState({error: true});
+      });
+  }
 
-        })
-        .catch(error => {
-            console.error(error)
-            this.setState({error: true})
-        })
-    }
-
-    render = () => {
-        return (
-            <OrganizationMembers members={this.state.members} />
-        )
-    }
+  render = () => {
+    return <OrganizationMembers members={this.state.members} />;
+  };
 }
-
