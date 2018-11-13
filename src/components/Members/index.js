@@ -13,10 +13,12 @@ export default class OrgMembersDisplay extends React.Component {
     constructor(props) {
         super(props)
         this.state = {members: [], pending: true, error: false}
+    }
 
+    componentDidMount() {
         // Load the organization members
-        this.org = new GithubOrg(this.props.orgName)
-        this.org.publicMembers().then(members => {
+        const org = new GithubOrg(this.props.orgName)
+        org.publicMembers().then(members => {
             this.setState({members, pending: false})
 
         })
