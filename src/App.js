@@ -6,7 +6,13 @@ import Events from './components/Events';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Welcome from './components/Welcome';
-import OrgMembersDisplay from './components/Members'
+import OrgMembersDisplay from './components/Members';
+import styled from 'styled-components';
+
+const PostWrap = styled.div`
+  margin: 0 auto;
+  max-width: 948px;
+`;
 
 function App() {
   return (
@@ -15,10 +21,12 @@ function App() {
       <Welcome />
       <Box bg="#eff1f5">
         {/* Members list */}
-        <OrgMembersDisplay orgName={"js-ni"} />
+        <OrgMembersDisplay orgName={'js-ni'} />
 
-        <Box m="0 auto" px={[3, 4, 0]} py={5} css={{maxWidth: '948px'}}>
-          <MediumPosts />
+        <Box m="0 auto" px={[3, 4, 0]} py={5}>
+          <PostWrap>
+            <MediumPosts />
+          </PostWrap>
         </Box>
       </Box>
       <Events />
