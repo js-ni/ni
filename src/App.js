@@ -6,7 +6,8 @@ import Events from './components/Events';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Welcome from './components/Welcome';
-import OrgMembersDisplay from './components/Members'
+import OrgMembersDisplay from './components/Members';
+import Talks from './components/Talks';
 
 function App() {
   return (
@@ -15,12 +16,13 @@ function App() {
       <Welcome />
       <Box bg="#eff1f5">
         {/* Members list */}
-        <OrgMembersDisplay orgName={"js-ni"} />
+        <OrgMembersDisplay orgName={'js-ni'} />
 
         <Box m="0 auto" px={[3, 4, 0]} py={5} css={{maxWidth: '948px'}}>
           <MediumPosts />
         </Box>
       </Box>
+      <Talks />
       <Events />
       <Footer />
     </>
