@@ -1,17 +1,19 @@
 {
-  "main.css": "/static/css/main.57c97a5a.chunk.css",
-  "main.js": "/static/js/main.3c50851c.chunk.js",
-  "main.js.map": "/static/js/main.3c50851c.chunk.js.map",
-  "static/css/1.f5c3b2a4.chunk.css": "/static/css/1.f5c3b2a4.chunk.css",
-  "static/js/1.bbfa8b7d.chunk.js": "/static/js/1.bbfa8b7d.chunk.js",
-  "static/js/1.bbfa8b7d.chunk.js.map": "/static/js/1.bbfa8b7d.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
-  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/css/main.57c97a5a.chunk.css.map": "/static/css/main.57c97a5a.chunk.css.map",
-  "static/media/event.jpg": "/static/media/event.ec859341.jpg",
-  "static/media/computer.jpg": "/static/media/computer.e3baf278.jpg",
-  "static/css/1.f5c3b2a4.chunk.css.map": "/static/css/1.f5c3b2a4.chunk.css.map",
-  "index.html": "/index.html",
-  "precache-manifest.e72548ef4ea281ad908b7f9087d628a6.js": "/precache-manifest.e72548ef4ea281ad908b7f9087d628a6.js",
-  "service-worker.js": "/service-worker.js"
+  "files": {
+    "main.css": "/static/css/main.c91278da.chunk.css",
+    "main.js": "/static/js/main.0648f091.chunk.js",
+    "main.js.map": "/static/js/main.0648f091.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.617501a0.chunk.css": "/static/css/2.617501a0.chunk.css",
+    "static/js/2.bbad7d0c.chunk.js": "/static/js/2.bbad7d0c.chunk.js",
+    "static/js/2.bbad7d0c.chunk.js.map": "/static/js/2.bbad7d0c.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.3d0524a819fd92962a3770b5fc46a869.js": "/precache-manifest.3d0524a819fd92962a3770b5fc46a869.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.617501a0.chunk.css.map": "/static/css/2.617501a0.chunk.css.map",
+    "static/css/main.c91278da.chunk.css.map": "/static/css/main.c91278da.chunk.css.map",
+    "static/media/computer.jpg": "/static/media/computer.e3baf278.jpg",
+    "static/media/event.jpg": "/static/media/event.ec859341.jpg"
+  }
 }
