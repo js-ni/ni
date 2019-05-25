@@ -1,5 +1,6 @@
 import React from 'react';
 import {Box} from 'rebass';
+import styled from 'styled-components';
 import MediumPosts from '@js-ni/medium-posts';
 
 import Events from './components/Events';
@@ -7,7 +8,7 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Welcome from './components/Welcome';
 import OrgMembersDisplay from './components/Members';
-import styled from 'styled-components';
+import Talks from './components/Talks';
 
 const PostWrap = styled.div`
   margin: 0 auto;
@@ -21,7 +22,7 @@ function App() {
       <Welcome />
       <Box bg="#eff1f5">
         {/* Members list */}
-        <OrgMembersDisplay orgName={'js-ni'} />
+        <OrgMembersDisplay orgName="js-ni" />
 
         <Box m="0 auto" px={[3, 4, 0]} py={5}>
           <PostWrap>
@@ -29,6 +30,7 @@ function App() {
           </PostWrap>
         </Box>
       </Box>
+      <Talks />
       <Events />
       <Footer />
     </>
