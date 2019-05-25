@@ -10,15 +10,12 @@ import {Box} from 'rebass';
  */
 export function MemberProfile(props) {
   return (
-    <a
-      href={props.member.html_url}
-      title={props.member.login}
-      style={{display: 'inline-block'}}
-    >
+    <a href={props.member.html_url} title={props.member.login}>
       <img
-        src={props.member.avatar_url}
-        width="64px"
         alt={props.member.login}
+        src={props.member.avatar_url}
+        style={{borderRadius: '8px'}}
+        width="64px"
       />
     </a>
   );
@@ -33,21 +30,14 @@ export function MemberProfile(props) {
 export function OrganizationMembers(props) {
   return (
     <Box
-      px={20}
       style={{
         display: 'flex',
-        flexDirection: 'row',
         justifyContent: 'center',
         flexWrap: 'wrap',
       }}
     >
       {props.members.map(member => (
-        <Box
-          mx={2}
-          my={2}
-          style={{borderRadius: '8px', overflow: 'hidden'}}
-          key={`member-${member.login}`}
-        >
+        <Box mx={2} my={2} key={member.login}>
           <MemberProfile member={member} />
         </Box>
       ))}
