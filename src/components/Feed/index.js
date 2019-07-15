@@ -38,6 +38,7 @@ function Feed() {
 }
 
 function Article(props) {
+  const parsedDate = moment(props.pubDate).fromNow();
   return (
     <Card
       as="article"
@@ -49,8 +50,7 @@ function Article(props) {
       <Link color="#222" href={props.guid}>
         <Heading as="h3" children={props.title} fontWeight="normal" mb="4px" />
       </Link>
-      <Text as="time" color="#aaa" children={props.createdAt} />
-      <Text children={props.subtitle} color="#888" mt={16} />
+      <Text as="time" color="#aaa" children={parsedDate} />
     </Card>
   );
 }
