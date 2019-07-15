@@ -29,7 +29,7 @@ function Feed() {
         </Text>
       ) : (
         posts.map(post => (
-          <Box key={post.url} mt={16}>
+          <Box key={post.guid} mt={16}>
             <Article {...post} />
           </Box>
         ))
