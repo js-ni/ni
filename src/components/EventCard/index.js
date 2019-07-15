@@ -1,4 +1,4 @@
-import {format} from 'date-fns';
+import {format, parseISO} from 'date-fns';
 import esLocale from 'date-fns/locale/es';
 import React from 'react';
 import {Box, Card, Heading, Image, Link, Text} from 'rebass';
@@ -30,12 +30,12 @@ function EventCard(props) {
 
         <Text mt={2} css={{textTransform: 'capitalize'}}>
           <FontAwesomeIcon fixedWidth icon={['far', 'calendar-alt']} />
-          {format(props.start_time, 'MMMM d, y', {locale: esLocale})}
+          {format(parseISO(props.start_time), 'MMMM d, y', {locale: esLocale})}
         </Text>
         <Text>
           <FontAwesomeIcon fixedWidth icon={['far', 'clock']} />
-          {format(props.start_time, 'hh:mm a')} -{' '}
-          {format(props.end_time, 'hh:mm a')}
+          {format(parseISO(props.start_time), 'hh:mm a')} -{' '}
+          {format(parseISO(props.end_time), 'hh:mm a')}
         </Text>
         <Text>
           <Link
