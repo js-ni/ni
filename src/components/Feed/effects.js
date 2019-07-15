@@ -35,6 +35,20 @@ export const usePosts = function usePosts(RSSUrl) {
     fetch(requestUrl)
       .then(r => r.json())
       .then(data => {
+        // The posts are stored in the 'items' array.
+        // Each post has post content and description as HTML source.
+        // This function has to provide a representation of these
+        // values into their plain text conterpart.
+        data.items = data.items.map(({content, description, ...rest}) => {
+          return {
+            contentPlain: htmlToText(content),
+            descriptionPlain: htmlToText(description),
+            content,
+            description,
+            ...rest,
+          };
+        });
+
         setPosts(data.items);
         setLoading(false);
       });
