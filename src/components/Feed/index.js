@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import {Box, Card, Flex, Heading, Link, Text} from 'rebass';
 
 import {usePosts} from './effects';
@@ -51,6 +52,11 @@ function Article(props) {
         <Heading as="h3" children={props.title} fontWeight="normal" mb="4px" />
       </Link>
       <Text as="time" color="#aaa" children={parsedDate} />
+      <Text
+        children={props.descriptionPlain.split('.').slice(0, 1)}
+        color="#888"
+        mt={16}
+      />
     </Card>
   );
 }
