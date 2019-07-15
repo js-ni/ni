@@ -46,7 +46,7 @@ function Article(props) {
       boxShadow="0px 4px 6px rgba(0, 0, 0, 0.1)"
       p={20}
     >
-      <Link color="#222" href={props.url}>
+      <Link color="#222" href={props.guid}>
         <Heading as="h3" children={props.title} fontWeight="normal" mb="4px" />
       </Link>
       <Text as="time" color="#aaa" children={props.createdAt} />
