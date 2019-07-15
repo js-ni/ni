@@ -7,7 +7,6 @@
     "@fortawesome/free-regular-svg-icons": "5.8.2",
     "@fortawesome/free-solid-svg-icons": "5.8.2",
     "@fortawesome/react-fontawesome": "0.1.4",
-    "@js-ni/medium-posts": "0.1.1",
     "date-fns": "2.0.0-alpha.27",
     "gh-pages": "2.0.1",
     "husky": "2.3.0",

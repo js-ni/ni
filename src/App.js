@@ -1,7 +1,8 @@
 import React from 'react';
 import {Box} from 'rebass';
 import styled from 'styled-components';
-import MediumPosts from '@js-ni/medium-posts';
+
+import Feed from './components/Feed';
 
 import Events from './components/Events';
 import Footer from './components/Footer';
@@ -26,7 +27,7 @@ function App() {
 
         <Box m="0 auto" px={[3, 4, 0]} py={5}>
           <PostWrap>
-            <MediumPosts />
+            <Feed />
           </PostWrap>
         </Box>
       </Box>
