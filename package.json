@@ -7,11 +7,11 @@
     "@fortawesome/free-regular-svg-icons": "5.8.2",
     "@fortawesome/free-solid-svg-icons": "5.8.2",
     "@fortawesome/react-fontawesome": "0.1.4",
-    "@js-ni/medium-posts": "0.1.1",
     "date-fns": "2.0.0-alpha.27",
     "gh-pages": "2.0.1",
     "husky": "2.3.0",
     "lint-staged": "8.1.7",
+    "moment": "2.24.0",
     "prettier": "1.17.1",
     "react": "16.8.6",
     "react-dom": "16.8.6",
@@ -29,20 +29,22 @@
   },
   "eslintConfig": {
     "extends": "react-app",
-    "no-restricted-imports": [
-      "error",
-      {
-        "paths": [
-          {
-            "name": "styled-components",
-            "message": "Please import from styled-components/macro."
-          }
-        ],
-        "patterns": [
-          "!styled-components/macro"
-        ]
-      }
-    ]
+    "rules": {
+      "no-restricted-imports": [
+        "error",
+        {
+          "paths": [
+            {
+              "name": "styled-components",
+              "message": "Please import from styled-components/macro."
+            }
+          ],
+          "patterns": [
+            "!styled-components/macro"
+          ]
+        }
+      ]
+    }
   },
   "browserslist": [
     ">0.2%",
