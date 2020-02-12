@@ -1,5 +1,8 @@
 import React from 'react';
-import {Box} from 'rebass';
+import {For} from 'react-loops';
+import {Box, Flex} from '@chakra-ui/core';
+
+import Container from 'components/Container';
 
 /**
  * Element that displays a Github profile card. For now it only displays
@@ -11,10 +14,11 @@ import {Box} from 'rebass';
 export function MemberProfile(props) {
   return (
     <a href={props.member.html_url} title={props.member.login}>
-      <img
+      <Box
+        as="img"
         alt={props.member.login}
+        rounded={4}
         src={props.member.avatar_url}
-        style={{borderRadius: '8px'}}
         width="64px"
       />
     </a>
@@ -29,18 +33,15 @@ export function MemberProfile(props) {
  */
 export function OrganizationMembers(props) {
   return (
-    <Box
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        flexWrap: 'wrap',
-      }}
-    >
-      {props.members.map(member => (
-        <Box mx={2} my={2} key={member.login}>
-          <MemberProfile member={member} />
-        </Box>
-      ))}
-    </Box>
+    <Container as={Flex} justifyContent="center" maxWidth="100%" wrap="wrap">
+      <For
+        of={props.members}
+        as={member => (
+          <Box m={2}>
+            <MemberProfile member={member} />
+          </Box>
+        )}
+      />
+    </Container>
   );
 }

@@ -1,19 +1,16 @@
 import React from 'react';
-import {Box, Heading} from 'rebass';
+import {Box, Heading} from '@chakra-ui/core';
 
-function Header() {
+export default function Header() {
   return (
-    <Box bg="#f7df1f" py={20} css={{borderBottom: '1px solid #bdbdbd'}}>
+    <Box bg="#f7df1f" py={4}>
       <Heading
         as="h1"
-        color="#2d2d2d"
+        color="gray.700"
         children="Comunidad JavaScript de Nicaragua"
-        fontSize={5}
         fontWeight="normal"
         textAlign="center"
       />
     </Box>
   );
 }
-
-export default Header;

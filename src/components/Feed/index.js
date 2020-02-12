@@ -1,65 +1,55 @@
+import {formatDistanceToNow, parseISO} from 'date-fns';
+import esLocale from 'date-fns/locale/es';
 import React from 'react';
-import moment from 'moment';
-import {Box, Card, Flex, Heading, Link, Text} from 'rebass';
+import {For} from 'react-loops';
+import {Box, Flex, Heading, Text} from '@chakra-ui/core';
 
 import {usePosts} from './effects';
+import Container from 'components/Container';
 
-function Feed() {
-  const JSNIC_MEDIUM_RSS_FEED = 'https://medium.com/feed/javascript-nicaragua';
+const JSNIC_MEDIUM_RSS_FEED = 'https://medium.com/feed/javascript-nicaragua';
+
+export default function Feed() {
   const [loading, posts] = usePosts(JSNIC_MEDIUM_RSS_FEED);
 
   return (
-    <React.Fragment>
-      <Flex alignItems="flex-end" justifyContent="space-between">
-        <Heading fontSize={28} fontWeight="normal">
+    <Container>
+      <Flex align="flex-end" justify="space-between">
+        <Heading fontWeight="normal" size="lg">
           Blog
         </Heading>
-        <Text
-          as="a"
-          fontSize={14}
-          href="https://medium.com/javascript-nicaragua"
-        >
+        <Text as="a" href="https://medium.com/javascript-nicaragua">
           Ver más artículos
         </Text>
       </Flex>
 
       {loading ? (
-        <Text fontSize={16} mt={15}>
-          Cargando publicaciones...
-        </Text>
+        <Text mt={4}>Cargando publicaciones...</Text>
       ) : (
-        posts.map(post => (
-          <Box key={post.guid} mt={16}>
-            <Article {...post} />
-          </Box>
-        ))
+        <For of={posts} as={post => <Article post={post} mt={3} />} />
       )}
-    </React.Fragment>
+    </Container>
   );
 }
 
-function Article(props) {
-  const parsedDate = moment(props.pubDate).fromNow();
+function Article({post, ...props}) {
+  const parsedDate = formatDistanceToNow(parseISO(post.pubDate), {
+    locale: esLocale,
+  });
+
   return (
-    <Card
-      as="article"
-      bg="white"
-      borderRadius={4}
-      boxShadow="0px 4px 6px rgba(0, 0, 0, 0.1)"
-      p={20}
-    >
-      <Link color="#222" href={props.guid}>
-        <Heading as="h3" children={props.title} fontWeight="normal" mb="4px" />
-      </Link>
-      <Text as="time" color="#aaa" children={parsedDate} />
-      <Text
-        children={props.descriptionPlain.split('.').slice(0, 1)}
-        color="#888"
-        mt={16}
-      />
-    </Card>
+    <Box {...props} as="article" bg="white" rounded={4} p={4} shadow="md">
+      <Text as="a" href={post.guid}>
+        <Heading as="h3" fontWeight="normal" size="lg">
+          {post.title}
+        </Heading>
+      </Text>
+      <Text as="time" color="#aaa">
+        {parsedDate}
+      </Text>
+      <Text color="#888" mt={4}>
+        {post.descriptionPlain.split('.').slice(0, 1)}
+      </Text>
+    </Box>
   );
 }
-
-export default Feed;
-export {Article};

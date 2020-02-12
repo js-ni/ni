@@ -1,54 +1,54 @@
 [
-    {
-      "end_time": "2018-04-14T17:00:00-0600",
-      "id": "181525752639460",
-      "name": "Coffee JS - Abril 2018",
-      "place": {
-        "name": "Chocoyo Labs",
-        "location": {
-          "city": "Managua",
-          "country": "Nicaragua",
-          "latitude": 12.136062922753,
-          "longitude": -86.266359686852,
-          "street": "De la DGI o TransNica 300 metros al norte, contiguo a Joyería Garzon."
-        },
-        "id": "1551848665142527"
+  {
+    "end_time": "2018-04-14T17:00:00-0600",
+    "id": "181525752639460",
+    "name": "Coffee JS - Abril 2018",
+    "place": {
+      "name": "Chocoyo Labs",
+      "location": {
+        "city": "Managua",
+        "country": "Nicaragua",
+        "latitude": 12.136062922753,
+        "longitude": -86.266359686852,
+        "street": "De la DGI o TransNica 300 metros al norte, contiguo a Joyería Garzon."
       },
-      "start_time": "2018-04-14T14:00:00-0600"
+      "id": "1551848665142527"
     },
-    {
-      "end_time": "2018-03-24T16:00:00-0600",
-      "id": "1836388649997571",
-      "name": "Coffee JS - Marzo 2018",
-      "place": {
-        "name": "Chocoyo Labs",
-        "location": {
-          "city": "Managua",
-          "country": "Nicaragua",
-          "latitude": 12.136062922753,
-          "longitude": -86.266359686852,
-          "street": "De la DGI o TransNica 300 metros al norte, contiguo a Joyería Garzon."
-        },
-        "id": "1551848665142527"
+    "start_time": "2018-04-14T14:00:00-0600"
+  },
+  {
+    "end_time": "2018-03-24T16:00:00-0600",
+    "id": "1836388649997571",
+    "name": "Coffee JS - Marzo 2018",
+    "place": {
+      "name": "Chocoyo Labs",
+      "location": {
+        "city": "Managua",
+        "country": "Nicaragua",
+        "latitude": 12.136062922753,
+        "longitude": -86.266359686852,
+        "street": "De la DGI o TransNica 300 metros al norte, contiguo a Joyería Garzon."
       },
-      "start_time": "2018-03-24T14:00:00-0600"
+      "id": "1551848665142527"
     },
-    {
-      "end_time": "2018-02-24T17:00:00-0600",
-      "id": "151217388910423",
-      "name": "Coffee JS - Febrero 2018",
-      "place": {
-        "name": "Buffet Restaurante Espino Negro",
-        "location": {
-          "city": "Tipitapa",
-          "country": "Nicaragua",
-          "latitude": 12.201759494,
-          "longitude": -86.095476274,
-          "street": "505",
-          "zip": "505"
-        },
-        "id": "784905778244064"
+    "start_time": "2018-03-24T14:00:00-0600"
+  },
+  {
+    "end_time": "2018-02-24T17:00:00-0600",
+    "id": "151217388910423",
+    "name": "Coffee JS - Febrero 2018",
+    "place": {
+      "name": "Buffet Restaurante Espino Negro",
+      "location": {
+        "city": "Tipitapa",
+        "country": "Nicaragua",
+        "latitude": 12.201759494,
+        "longitude": -86.095476274,
+        "street": "505",
+        "zip": "505"
       },
-      "start_time": "2018-02-24T14:00:00-0600"
-    }
-  ]
+      "id": "784905778244064"
+    },
+    "start_time": "2018-02-24T14:00:00-0600"
+  }
+]

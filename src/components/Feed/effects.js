@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 
 const RSS2Json_ENDPOINT = 'https://api.rss2json.com/v1/api.json';
 
@@ -17,7 +17,7 @@ const htmlToText = function htmlToText(htmlSource) {
   return plain;
 };
 
-/** 
+/**
  Effect to retrieve a RSS feed as an array of objects.
  Each object correspond to a publication present in the feed.
 
@@ -39,7 +39,7 @@ export const usePosts = function usePosts(RSSUrl) {
         // Each post has post content and description as HTML source.
         // This function has to provide a representation of these
         // values into their plain text conterpart.
-        data.items = data.items.map(({content, description, ...rest}) => {
+        const posts = data.items.map(({content, description, ...rest}) => {
           return {
             contentPlain: htmlToText(content),
             descriptionPlain: htmlToText(description),
@@ -49,7 +49,7 @@ export const usePosts = function usePosts(RSSUrl) {
           };
         });
 
-        setPosts(data.items);
+        setPosts(posts);
         setLoading(false);
       });
   }, [RSSUrl]);
