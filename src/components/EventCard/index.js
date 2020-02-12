@@ -36,7 +36,7 @@ export default function EventCard(props) {
         width="100%"
       />
       <Flex direction="column" flex={1} p={4}>
-        <Link>
+        <Link href={`https://www.facebook.com/events/${props.id}`}>
           <Heading
             as="h2"
             color="gray.900"
