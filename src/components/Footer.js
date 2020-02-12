@@ -1,9 +1,9 @@
 import React from 'react';
-import {Flex, Text} from 'rebass';
+import {Flex, Text} from '@chakra-ui/core';
 
 function Footer() {
   return (
-    <Flex alignItems="center" bg="#273531" justifyContent="space-between" p={4}>
+    <Flex align="center" bg="#273531" justify="space-between" p={4}>
       <Text color="#6d7d79">
         Comunidad de desarrolladores JavaScript de Nicaragua
       </Text>

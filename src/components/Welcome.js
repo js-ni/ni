@@ -1,59 +1,31 @@
 import React from 'react';
-import styled from 'styled-components';
-import {Box, Heading, Text} from 'rebass';
+import {Box, Flex, Heading, Text} from '@chakra-ui/core';
 
 import bgImage from './computer.jpg';
 
-const Container = styled.div`
-  position: relative;
-
-  background-image: url(${bgImage});
-  background-size: cover;
-  background-repeat: repeat;
-  background-attachment: fixed;
-
-  &:before {
-    content: '';
-
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-
-    background-color: rgba(44, 62, 80, 0.9);
-  }
-`;
-
-const HeroText = styled.div`
-  margin: 0 auto;
-  maxwidth: 600px;
-  position: relative;
-  textalign: center;
-  zindex: 44;
-  max-width: 600px;
-  text-align: center;
-`;
-
-function Welcome() {
+export default function Welcome() {
   return (
-    <Container>
-      <Box color="#f1f1f1" px={3} py={5}>
-        <HeroText>
-          <Heading fontSize={5}>¿Quiénes somos?</Heading>
-          <Text fontSize={2} lineHeight={1.5} mt={4}>
-            Somos un grupo de desarrolladores que nos reunimos para hablar
-            acerca de librerías, frameworks y todo lo relacionado a JavaScript.
-          </Text>
-          <Text fontSize={2} lineHeight={1.5} mt={3}>
-            Nos reunimos para socializar y comer pizza, compartimos
-            conocimientos mediante charlas presenciales o vía hangouts. Creamos
-            capital social para tener nuevas oportunidades de empleo.
-          </Text>
-        </HeroText>
+    <Flex
+      backgroundAttachment="fixed"
+      backgroundImage={`linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url(${bgImage})`}
+      backgroundRepeat="no-repeat"
+      backgroundSize="cover"
+      justify="center"
+      px={4}
+      py={[4, 8]}
+    >
+      <Box color="white" maxWidth={600} textAlign="center">
+        <Heading size="lg">¿Quiénes somos?</Heading>
+        <Text lineHeight={1.5} mt={4}>
+          Somos un grupo de desarrolladores que nos reunimos para hablar acerca
+          de librerías, frameworks y todo lo relacionado a JavaScript.
+        </Text>
+        <Text lineHeight={1.5} mt={3}>
+          Nos reunimos para socializar y comer pizza, compartimos conocimientos
+          mediante charlas presenciales o vía hangouts. Creamos capital social
+          para tener nuevas oportunidades de empleo.
+        </Text>
       </Box>
-    </Container>
+    </Flex>
   );
 }
-
-export default Welcome;
