@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 
 const RSS2Json_ENDPOINT = 'https://api.rss2json.com/v1/api.json';
 
@@ -17,7 +17,7 @@ const htmlToText = function htmlToText(htmlSource) {
   return plain;
 };
 
-/** 
+/**
  Effect to retrieve a RSS feed as an array of objects.
  Each object correspond to a publication present in the feed.
 
