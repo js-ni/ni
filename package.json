@@ -25,6 +25,7 @@
     "deploy": "react-scripts build && cp CNAME build/ && gh-pages -d build",
     "eject": "react-scripts eject",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "postbuild": "react-snap",
     "start": "react-scripts start",
     "test": "react-scripts test"
   },
@@ -47,5 +48,8 @@
       "prettier --write",
       "git add"
     ]
+  },
+  "devDependencies": {
+    "react-snap": "1.23.0"
   }
 }

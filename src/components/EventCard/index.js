@@ -30,11 +30,14 @@ export default function EventCard(props) {
       overflow="hidden"
       shadow="md"
     >
-      <Image
-        alt={props.name}
-        src={buildStaticMapUrl(latitude, longitude)}
-        width="100%"
-      />
+      {process.env.NODE_ENV === 'production' &&
+        navigator.userAgent !== 'ReactSnap' && (
+          <Image
+            alt={props.name}
+            src={buildStaticMapUrl(latitude, longitude)}
+            width="100%"
+          />
+        )}
       <Flex direction="column" flex={1} p={4}>
         <Link href={`https://www.facebook.com/events/${props.id}`}>
           <Heading
