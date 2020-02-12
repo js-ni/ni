@@ -25,6 +25,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
 
+      - name: Install yarn dependencies
+        run: yarn install --frozen-lockfile
+
       - name: Deploy to GitHub pages
-        run: |
-          yarn deploy
+        run: yarn deploy
