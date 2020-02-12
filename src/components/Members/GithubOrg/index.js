@@ -41,11 +41,11 @@ export default class GithubOrg {
         const repos = response.json();
 
         return repos.sort((a, b) => {
-          return b.stargazers_count - a.stargazers_count
-        })
+          return b.stargazers_count - a.stargazers_count;
+        });
       }
 
-      return []
+      return [];
     });
-  }
+  };
 }
