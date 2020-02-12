@@ -24,6 +24,7 @@
     "build": "react-scripts build",
     "deploy": "react-scripts build && cp CNAME build/ && gh-pages -d build",
     "eject": "react-scripts eject",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "react-scripts start",
     "test": "react-scripts test"
   },
