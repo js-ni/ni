@@ -3,12 +3,13 @@ import {For} from 'react-loops';
 import {Box, Grid, Heading} from '@chakra-ui/core';
 
 import talks from './talks.json';
-import TalkCard from '../TalkCard';
+import Container from 'components/Container';
+import TalkCard from 'components/TalkCard';
 
 export default function Talks() {
   return (
     <Box bg="rgba(44, 62, 80, 0.9)">
-      <Box m="0 auto" maxWidth={948} px={[3, 4, 4, 0]} py={[4, 8]}>
+      <Container>
         <Heading color="white" size="lg">
           Charlas
         </Heading>
@@ -20,7 +21,7 @@ export default function Talks() {
         >
           <For of={talks} as={talk => <TalkCard {...talk} />} />
         </Grid>
-      </Box>
+      </Container>
     </Box>
   );
 }

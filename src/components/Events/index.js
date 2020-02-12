@@ -4,7 +4,8 @@ import {Box, Grid, Heading} from '@chakra-ui/core';
 
 import bgImage from './event.jpg';
 import events from './events.json';
-import EventCard from '../EventCard';
+import Container from 'components/Container';
+import EventCard from 'components/EventCard';
 
 export default function Events() {
   return (
@@ -14,7 +15,7 @@ export default function Events() {
       backgroundRepeat="no-repeat"
       backgroundSize="cover"
     >
-      <Box m="0 auto" maxWidth={948} px={[3, 4, 4, 0]} py={[4, 8]}>
+      <Container>
         <Heading color="white" size="lg">
           Eventos
         </Heading>
@@ -26,7 +27,7 @@ export default function Events() {
         >
           <For of={events} as={event => <EventCard {...event} />} />
         </Grid>
-      </Box>
+      </Container>
     </Box>
   );
 }

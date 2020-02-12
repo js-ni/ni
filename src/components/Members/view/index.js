@@ -2,6 +2,8 @@ import React from 'react';
 import {For} from 'react-loops';
 import {Box, Flex} from '@chakra-ui/core';
 
+import Container from 'components/Container';
+
 /**
  * Element that displays a Github profile card. For now it only displays
  * the member profile picture with a link to member profile.
@@ -17,7 +19,7 @@ export function MemberProfile(props) {
         alt={props.member.login}
         rounded={4}
         src={props.member.avatar_url}
-        width={16}
+        width="64px"
       />
     </a>
   );
@@ -31,15 +33,15 @@ export function MemberProfile(props) {
  */
 export function OrganizationMembers(props) {
   return (
-    <Flex justify="center" wrap="wrap">
+    <Container as={Flex} justifyContent="center" maxWidth="100%" wrap="wrap">
       <For
         of={props.members}
         as={member => (
-          <Box mx={2} my={2}>
+          <Box m={2}>
             <MemberProfile member={member} />
           </Box>
         )}
       />
-    </Flex>
+    </Container>
   );
 }

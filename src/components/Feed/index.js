@@ -5,6 +5,7 @@ import {For} from 'react-loops';
 import {Box, Flex, Heading, Text} from '@chakra-ui/core';
 
 import {usePosts} from './effects';
+import Container from 'components/Container';
 
 const JSNIC_MEDIUM_RSS_FEED = 'https://medium.com/feed/javascript-nicaragua';
 
@@ -12,7 +13,7 @@ export default function Feed() {
   const [loading, posts] = usePosts(JSNIC_MEDIUM_RSS_FEED);
 
   return (
-    <Box m="0 auto" maxWidth={948} px={[3, 4, 4, 0]} py={[4, 8]}>
+    <Container>
       <Flex align="flex-end" justify="space-between">
         <Heading fontWeight="normal" size="lg">
           Blog
@@ -27,7 +28,7 @@ export default function Feed() {
       ) : (
         <For of={posts} as={post => <Article post={post} mt={3} />} />
       )}
-    </Box>
+    </Container>
   );
 }
 

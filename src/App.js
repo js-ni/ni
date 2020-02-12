@@ -17,10 +17,7 @@ function App() {
       <Welcome />
       <Box bg="#eff1f5">
         <OrgMembersDisplay orgName="js-ni" />
-
-        <Box m="0 auto" px={[3, 4, 0]} py={5}>
-          <Feed />
-        </Box>
+        <Feed />
       </Box>
       <Talks />
       <Events />
