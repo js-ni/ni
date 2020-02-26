@@ -1,8 +1,7 @@
 import {format, parseISO} from 'date-fns';
 import esLocale from 'date-fns/locale/es';
 import React from 'react';
-import {Box, Heading, Text} from '@chakra-ui/core';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {Box, Flex, Heading, Icon} from '@chakra-ui/core';
 
 export default function TalkCard(props) {
   return (
@@ -18,15 +17,15 @@ export default function TalkCard(props) {
       </Heading>
 
       <Box color="gray.600">
-        <Text mt={4} css={{textTransform: 'capitalize'}}>
-          <FontAwesomeIcon fixedWidth icon={['far', 'calendar-alt']} />
+        <Flex align="center" mt={4} textTransform="capitalize">
+          <Icon name="calendar-alt" mr={1} />
           {format(parseISO(props.start_time), 'MMMM d, y', {locale: esLocale})}
-        </Text>
-        <Text mt={1}>
-          <FontAwesomeIcon fixedWidth icon={['far', 'clock']} />
+        </Flex>
+        <Flex align="center" mt={1}>
+          <Icon name="clock" mr={1} />
           {format(parseISO(props.start_time), 'hh:mm a')} -{' '}
           {format(parseISO(props.end_time), 'hh:mm a')}
-        </Text>
+        </Flex>
       </Box>
     </Box>
   );
