@@ -12,10 +12,7 @@ import Talks from './components/Talks';
 
 const customTheme = {
   ...theme,
-  icons: {
-    ...theme.icons,
-    ...customIcons,
-  },
+  icons: customIcons,
 };
 
 function App() {
