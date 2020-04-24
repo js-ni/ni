@@ -7,6 +7,7 @@ import Feed from './components/Feed';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Welcome from './components/Welcome';
+import SocialNetworks from './components/SocialNetworks';
 import OrgMembersDisplay from './components/Members';
 import Talks from './components/Talks';
 
@@ -21,6 +22,7 @@ function App() {
       <CSSReset />
       <Header />
       <Welcome />
+      <SocialNetworks />
       <Box bg="#eff1f5">
         <OrgMembersDisplay orgName="js-ni" />
         <Feed />
