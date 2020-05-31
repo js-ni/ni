@@ -43,7 +43,7 @@ export default function Welcome() {
             />
           </a>
           <a
-            href="https://www.instagram.com/javascriptnicaragua/"
+            href="https://www.instagram.com/javascript_ni/"
             target="_blank"
             style={{marginRight: '10px', marginTop: '10px'}}
           >
@@ -52,6 +52,18 @@ export default function Welcome() {
               size="64px"
               src="/assets/img/social-networks/instagram.png"
               alt="Instagram"
+            />
+          </a>
+          <a
+            href="https://www.twitter.com/javascript_ni/"
+            target="_blank"
+            style={{marginRight: '10px', marginTop: '10px'}}
+          >
+            <Image
+              rounded="full"
+              size="64px"
+              src="/assets/img/social-networks/twitter.png"
+              alt="Twitter"
             />
           </a>
           <a
