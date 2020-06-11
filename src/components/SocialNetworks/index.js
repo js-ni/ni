@@ -67,7 +67,7 @@ export default function Welcome() {
             />
           </a>
           <a
-            href="https://join.slack.com/t/javascript-nicaragua/shared_invite/zt-bx4lez76-7JaRL8WnYlCnFoF~IOElQw"
+            href="https://join.slack.com/t/javascript-nicaragua/shared_invite/zt-eyj6vlp2-0efY~7pLTqWVmLAmfTzVag"
             target="_blank"
             style={{marginTop: '10px'}}
           >
