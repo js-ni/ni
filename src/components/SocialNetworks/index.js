@@ -31,6 +31,18 @@ export default function Welcome() {
             />
           </a>
           <a
+            href="https://t.me/joinchat/T9QmVEsRCS14IX8hMKVhYw"
+            target="_blank"
+            style={{marginRight: '10px', marginTop: '10px'}}
+          >
+            <Image
+              rounded="full"
+              size="64px"
+              src="/assets/img/social-networks/telegram.webp"
+              alt="Telegram"
+            />
+          </a>
+          <a
             href="https://www.youtube.com/channel/UC2qZ0Fvw9NNN5ROdKydeV8Q"
             target="_blank"
             style={{marginRight: '10px', marginTop: '10px'}}
