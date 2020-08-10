@@ -7,7 +7,7 @@ export default function Welcome() {
       <Box color="white" maxWidth={600} textAlign="center">
         <Stack isInline>
           <a
-            href="https://www.facebook.com/JavaScriptNicaragua/"
+            href="https://www.facebook.com/javascriptni/"
             target="_blank"
             style={{marginRight: '10px', marginTop: '10px'}}
           >
